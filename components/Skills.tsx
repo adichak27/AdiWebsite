@@ -7,10 +7,19 @@ import {
 import { 
   SiCsharp, SiCplusplus, SiJavascript, SiMongodb, SiKotlin, 
   SiTypescript, SiMysql, SiFirebase, SiHeroku, SiJenkins, 
-  SiPostgresql, SiR 
+  SiPostgresql, SiR, SiMicrosoftazure 
 } from 'react-icons/si'
 
 const skills = [
+  { 
+    name: 'Databases', 
+    icon: Database, 
+    items: [
+      { name: 'MySQL', icon: SiMysql },
+      { name: 'MongoDB', icon: SiMongodb },
+      { name: 'PostgreSQL', icon: SiPostgresql }
+    ]
+  },
   { 
     name: 'Languages', 
     icon: Code, 
@@ -33,22 +42,13 @@ const skills = [
       { name: 'React', icon: FaReact },
       { name: 'React Native', icon: FaReact },
       { name: 'Node.js', icon: FaNodeJs },
-      { name: 'Azure', icon: SiMysql },
+      { name: 'Azure', icon: SiMicrosoftazure },
       { name: 'AWS', icon: FaAws },
       { name: 'Docker', icon: FaDocker },
       { name: 'Firebase', icon: SiFirebase },
       { name: 'Heroku', icon: SiHeroku },
       { name: 'Jenkins', icon: SiJenkins },
       { name: 'Git', icon: FaGitAlt }
-    ]
-  },
-  { 
-    name: 'Databases', 
-    icon: Database, 
-    items: [
-      { name: 'MySQL', icon: SiMysql },
-      { name: 'MongoDB', icon: SiMongodb },
-      { name: 'PostgreSQL', icon: SiPostgresql }
     ]
   },
   { 
