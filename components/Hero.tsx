@@ -22,25 +22,52 @@ const TypewriterText = ({ text, delay }: { text: string; delay: number }) => {
   return <span>{displayText}</span>
 }
 
-const FloatingShape = ({ delay, className }: { delay: number; className: string }) => (
-  <motion.div
-    className={`absolute ${className}`}
-    animate={{
-      y: [-20, 20],
-      x: [-10, 10],
-      rotate: [-10, 10],
-    }}
-    transition={{
-      duration: 5,
-      delay,
-      repeat: Infinity,
-      repeatType: 'reverse',
-      ease: 'easeInOut',
-    }}
-  >
-    <div className="w-8 h-8 md:w-12 md:h-12 rounded-full bg-blue-400/20 backdrop-blur-sm" />
-  </motion.div>
-)
+const FloatingShape = ({ delay, className }: { delay: number; className: string }) => {
+  const angle = Math.random() * Math.PI * 2
+  const speed = 100
+  const xSpeed = Math.cos(angle) * speed
+  const ySpeed = Math.sin(angle) * speed
+  const duration = 5 + Math.random() * 10
+  
+  return (
+    <motion.div
+      className={`absolute ${className}`}
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        x: [0, xSpeed * duration],
+        y: [0, ySpeed * duration],
+        rotate: [-20, 20, -20],
+      }}
+      transition={{
+        opacity: {
+          duration: 1,
+          delay: delay * 0.2, // Stagger the fade-in of each dot
+        },
+        x: {
+          duration: duration,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "linear"
+        },
+        y: {
+          duration: duration,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "linear"
+        },
+        rotate: {
+          duration: 3,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          ease: "linear"
+        }
+      }}
+    >
+      <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-blue-300/25 backdrop-blur-sm" />
+    </motion.div>
+  )
+}
 
 const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
   e.preventDefault();
@@ -62,11 +89,27 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-10" />
       </div>
 
-      {/* Floating shapes */}
-      <FloatingShape delay={0} className="top-1/4 left-1/4" />
-      <FloatingShape delay={1} className="top-1/3 right-1/4" />
-      <FloatingShape delay={2} className="bottom-1/4 left-1/3" />
-      <FloatingShape delay={3} className="bottom-1/3 right-1/3" />
+      {/* Floating shapes with varied starting positions */}
+      <FloatingShape delay={0} className="top-[10%] left-[10%]" />
+      <FloatingShape delay={0.5} className="top-[80%] left-[15%]" />
+      <FloatingShape delay={1} className="top-[20%] left-[80%]" />
+      <FloatingShape delay={1.5} className="top-[65%] left-[70%]" />
+      <FloatingShape delay={2} className="top-[35%] left-[25%]" />
+      <FloatingShape delay={2.5} className="top-[50%] left-[90%]" />
+      <FloatingShape delay={3} className="top-[75%] left-[40%]" />
+      <FloatingShape delay={3.5} className="top-[15%] left-[60%]" />
+      <FloatingShape delay={4} className="top-[90%] left-[85%]" />
+      <FloatingShape delay={4.5} className="top-[45%] left-[15%]" />
+      <FloatingShape delay={5} className="top-[5%] left-[40%]" />
+      <FloatingShape delay={5.5} className="top-[70%] left-[5%]" />
+      <FloatingShape delay={6} className="top-[25%] left-[95%]" />
+      <FloatingShape delay={6.5} className="top-[85%] left-[75%]" />
+      <FloatingShape delay={7} className="top-[30%] left-[45%]" />
+      <FloatingShape delay={7.5} className="top-[60%] left-[30%]" />
+      <FloatingShape delay={8} className="top-[40%] left-[65%]" />
+      <FloatingShape delay={8.5} className="top-[95%] left-[20%]" />
+      <FloatingShape delay={9} className="top-[10%] left-[55%]" />
+      <FloatingShape delay={9.5} className="top-[55%] left-[85%]" />
 
       {/* Main content */}
       <motion.div
@@ -120,7 +163,7 @@ const Hero = () => {
 
       {/* Updated Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-blue-400"
+        className="absolute bottom-8 left-[48%] transform -translate-x-1/2 text-blue-400 z-10"
         style={{ opacity }}
         animate={{
           y: [0, 10, 0],
