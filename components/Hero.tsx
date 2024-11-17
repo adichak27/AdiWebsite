@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
@@ -51,6 +51,9 @@ const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) 
 };
 
 const Hero = () => {
+  const { scrollY } = useScroll()
+  const opacity = useTransform(scrollY, [0, 200], [1, 0])
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradients and patterns */}
@@ -115,12 +118,12 @@ const Hero = () => {
         </motion.div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Updated Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-blue-400"
+        style={{ opacity }}
         animate={{
           y: [0, 10, 0],
-          opacity: [0.5, 1, 0.5],
         }}
         transition={{
           duration: 2,
@@ -129,7 +132,7 @@ const Hero = () => {
           ease: 'easeInOut',
         }}
       >
-        <ArrowDown size={32} />
+        <ArrowDown size={64} />
       </motion.div>
     </section>
   )

@@ -70,7 +70,10 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Skills & Expertise
+          Skills & Technologies
+          <p className="text-gray-400 text-sm italic">
+            Hover over each skill
+          </p>
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skills.map((skill, index) => (

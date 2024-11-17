@@ -11,6 +11,7 @@ import Experience from '@/components/Experience'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 export default function Portfolio() {
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -61,7 +62,7 @@ export default function Portfolio() {
         whileTap={{ scale: 0.9 }}
         onClick={scrollToTop}
       >
-        <ArrowUp size={24} />
+        <ArrowUp size={32} />
       </motion.button>
       <div className="fixed left-4 bottom-4 flex flex-col gap-4">
         <motion.a
@@ -72,6 +73,7 @@ export default function Portfolio() {
           whileTap={{ scale: 0.9 }}
           className="p-2 bg-white text-gray-900 rounded-full shadow-lg"
         >
+          <FaGithub size={24} />
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/adi-chakravarthy/"
@@ -81,7 +83,7 @@ export default function Portfolio() {
           whileTap={{ scale: 0.9 }}
           className="p-2 bg-white text-gray-900 rounded-full shadow-lg"
         >
-          
+          <FaLinkedinIn size={24} />
         </motion.a>
         <motion.a
           href="mailto:adichak2002@gmail.com"

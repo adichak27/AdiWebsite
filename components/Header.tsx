@@ -26,6 +26,18 @@ const Header = () => {
           Adi Chakravarthy
         </motion.div>
         <nav className="hidden md:flex space-x-4">
+          <motion.a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="text-white hover:text-blue-400 transition-colors"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Home
+          </motion.a>
           {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
             <motion.a
               key={item}

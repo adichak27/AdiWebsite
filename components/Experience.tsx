@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Briefcase, Calendar } from 'lucide-react'
+import { Briefcase, Calendar, ExternalLink } from 'lucide-react'
 
 const experiences = [
   {
     title: 'Co-founder',
-    company: 'Take Two (Startup Social Media App)',
+    company: 'Take2',
     date: 'June 2024 – Present',
     description: 'Engineering the E2E development of a cross-platform social media app enabling movie enthusiasts to rank, track, and view movies within their social network. Developed a real-time Firebase backend for user authentication and media storage across iOS and Android. Integrated core features including comments, likes, and infinite scrolling inspired by TikTok.',
   },
@@ -69,19 +69,36 @@ const Experience = () => {
               </div>
               <div className="order-1 bg-gray-900 rounded-lg shadow-xl w-5/12 px-6 py-4">
                 <h3 className="font-bold text-xl mb-1">{experience.title}</h3>
-                <h4 className="text-blue-400 text-md font-semibold mb-2">{experience.company}</h4>
+                <h4 className="text-blue-400 text-md font-semibold mb-2">
+                  {experience.company}
+                </h4>
                 <div className="text-sm text-gray-400 mb-2 flex items-center">
                   <Calendar size={14} className="mr-1" />
                   {experience.date}
                 </div>
-                <motion.button
-                  className="text-blue-500 text-sm font-semibold focus:outline-none"
-                  onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {expandedIndex === index ? 'Read Less' : 'Read More'}
-                </motion.button>
+                <div className="flex items-center gap-3">
+                  <motion.button
+                    className="text-blue-500 text-sm font-semibold focus:outline-none"
+                    onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {expandedIndex === index ? 'Read Less' : 'Read More'}
+                  </motion.button>
+                  {experience.company === 'Take2' && (
+                    <motion.a
+                      href="https://www.take2-app.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-blue-500 hover:text-blue-400 transition-colors text-sm font-semibold"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Website
+                      <ExternalLink size={14} />
+                    </motion.a>
+                  )}
+                </div>
                 <AnimatePresence>
                   {expandedIndex === index && (
                     <motion.p
