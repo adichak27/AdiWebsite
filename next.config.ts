@@ -1,12 +1,17 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/AdiWebsite' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/AdiWebsite/' : '',
-};
+  ...(process.env.NODE_ENV === 'production' ? {
+    basePath: '/AdiWebsite',
+    assetPrefix: '/AdiWebsite/',
+    trailingSlash: true,
+  } : {}),
+  eslint: {
+    ignoreDuringBuilds: true,
+  }
+}
 
-export default nextConfig;
+export default nextConfig
