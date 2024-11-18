@@ -32,7 +32,8 @@ const About = () => {
           >
             <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-2xl"></div>
             <Image
-              src={process.env.NODE_ENV === 'production' ? '/AdiWebsite/images/adiprofile.png' : '/images/adiprofile.png'}
+            //       src={process.env.NODE_ENV === 'production' ? '/AdiWebsite/images/adiprofile.png' : '/images/adiprofile.png'}
+              src={"/images/adiprofile.png"}
               alt="Adi Chakravarthy"
               width={380}
               height={380}

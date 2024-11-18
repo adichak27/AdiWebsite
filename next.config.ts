@@ -4,13 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  /*...(process.env.NODE_ENV === 'production' ? {
-    basePath: '/AdiWebsite',
-    assetPrefix: '/AdiWebsite/',
-    trailingSlash: true,
-  } : {}), */
-  basePath: '',
-  assetPrefix: '',
   trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
