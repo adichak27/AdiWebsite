@@ -149,30 +149,30 @@ const Hero = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <a
-            href="#about"
-            onClick={(e) => handleScroll(e, 'about')}
-            className="bg-blue-500 text-white px-8 py-4 rounded-full font-semibold 
-                     hover:bg-blue-600 transition-all duration-300 
-                     shadow-lg hover:shadow-blue-500/50"
-          >
-            Learn More
-          </a>
+          
         </motion.div>
       </motion.div>
 
       {/* Updated Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-[48%] transform -translate-x-1/2 text-blue-400 z-10"
-        style={{ opacity }}
+        initial={{ opacity: 0 }}
         animate={{
+          opacity: [0, 1],
           y: [0, 10, 0],
         }}
+        style={{ opacity }}
         transition={{
-          duration: 2,
-          repeat: Infinity,
-          repeatType: 'reverse',
-          ease: 'easeInOut',
+          opacity: {
+            duration: 1,
+            delay: 3.5, // Appears after the "Learn More" button
+          },
+          y: {
+            duration: 2,
+            repeat: Infinity,
+            repeatType: 'reverse',
+            ease: 'easeInOut',
+          },
         }}
       >
         <ArrowDown size={64} />

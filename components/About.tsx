@@ -18,7 +18,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ margin: "-100px" }}
         >
           About Me
         </motion.h2>
@@ -28,7 +28,7 @@ const About = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ margin: "-100px" }}
           >
             <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-2xl"></div>
             <Image
@@ -45,7 +45,7 @@ const About = () => {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
+            viewport={{ margin: "-100px" }}
           >
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-gray-300">
@@ -59,7 +59,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ margin: "-100px" }}
               >
                 <motion.a
                   href="#contact"

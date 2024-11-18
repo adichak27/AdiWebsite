@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { ExternalLink } from 'lucide-react'
+import { FaGithub } from 'react-icons/fa'
 
 const projects = [
   {
-    title: 'Covey Town',
+    title: 'Avatar Arcade',
     description: 'A live web app enabling users to create avatars, chat, and play interactive games in a virtual setting.',
    // image: '/path/to/coveytown-image.jpg',
     technologies: ['TypeScript', 'React', 'PostgreSQL', 'Heroku'],
@@ -30,7 +31,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ margin: "-100px"}}
         >
           Featured Projects
         </motion.h2>
@@ -39,11 +40,11 @@ const Projects = () => {
             <motion.div
               key={project.title}
               className="bg-gray-800 rounded-xl p-6 shadow-lg flex flex-col h-full"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -5 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ margin: "-50px" }}
+              whileHover={{ scale: 1.02 }}
             >
               <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
               <p className="text-gray-300 mb-4">{project.description}</p>
@@ -61,7 +62,7 @@ const Projects = () => {
               
               <div className="flex-grow"></div>
               
-              <div className="flex justify-start mt-4">
+              <div className="flex gap-4 mt-4">
                 <motion.a
                   href={project.liveUrl}
                   target="_blank"
@@ -73,6 +74,19 @@ const Projects = () => {
                   <ExternalLink size={16} />
                   Live Demo
                 </motion.a>
+                {project.title === 'Avatar Arcade' && (
+                  <motion.a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub size={20} />
+                    Source Code
+                  </motion.a>
+                )}
               </div>
             </motion.div>
           ))}

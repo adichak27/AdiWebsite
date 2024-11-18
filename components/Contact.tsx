@@ -10,7 +10,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, margin: "-100px" }}
         >
           Get In Touch
         </motion.h2>
@@ -20,7 +20,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
+          viewport={{ once: false, margin: "-100px" }}
         >
           <p className="text-xl text-gray-300 mb-8">
             I'm currently looking for new opportunities. Whether you have a question or just want to say hi, feel free to reach out!

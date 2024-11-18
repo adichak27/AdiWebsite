@@ -11,55 +11,33 @@ const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) 
 
 const Header = () => {
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ type: 'spring', stiffness: 100 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-md"
-    >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <motion.div
-          className="text-2xl font-bold"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Adi Chakravarthy
-        </motion.div>
-        <nav className="hidden md:flex space-x-4">
-          <motion.a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="text-white hover:text-blue-400 transition-colors"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            Home
-          </motion.a>
-          {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
-            <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              onClick={(e) => handleScroll(e, item.toLowerCase())}
-              className="text-white hover:text-blue-400 transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              {item}
-            </motion.a>
+    <header className="fixed top-0 w-full z-50 bg-gray-900/50 backdrop-blur-md">
+      <nav className="container mx-auto px-4 py-4">
+        <ul className="flex justify-center space-x-8">
+          {['home', 'about', 'experience', 'skills', 'projects', 'contact'].map((item) => (
+            <motion.li key={item}>
+              <motion.a
+                href={`#${item}`}
+                className="text-gray-300 hover:text-blue-400 capitalize relative px-4 py-2 rounded-lg
+                         transition-colors duration-300"
+                onClick={(e) => handleScroll(e, item)}
+                whileHover={{ 
+                  scale: 1.1,
+                  boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)",
+                  transition: {
+                    type: "spring",
+                    stiffness: 300,
+                    damping: 20
+                  }
+                }}
+              >
+                {item}
+              </motion.a>
+            </motion.li>
           ))}
-        </nav>
-        <motion.button
-          className="md:hidden"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          <Menu size={24} />
-        </motion.button>
-      </div>
-    </motion.header>
+        </ul>
+      </nav>
+    </header>
   )
 }
 

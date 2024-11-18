@@ -11,7 +11,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+            viewport={{ once: false,  }}
           >
             <h3 className="text-2xl font-bold">Adi Chakravarthy</h3>
             <p className="text-gray-400">Software Engineer & Problem Solver</p>
@@ -21,7 +21,7 @@ const Footer = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
+            viewport={{ once: false,}}
           >
             <a
               href="https://github.com/adichak27"
@@ -52,7 +52,7 @@ const Footer = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
+          viewport={{ once: false,}}
         >
           &copy; {new Date().getFullYear()} Adi Chakravarthy. All rights reserved.
         </motion.div>

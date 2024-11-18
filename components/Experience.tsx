@@ -14,7 +14,7 @@ const experiences = [
     company: 'Validea Capital Management',
     date: 'March 2024 – July 2024',
     description: `Designed an advanced multi-agent Chatbot using Autogen, OpenAI, and Python providing personalized investment support for 50,000+ clients (Deployed using Docker and Azure). Created an AI model to analyze decades of Validea's financial content, delivering tailored investment insights.`,
-    skills: ['AI/ML', 'Python', 'OpenAI', 'Docker', 'Azure', 'AutoGen', 'AI/ML']
+    skills: ['AI/ML', 'Python', 'OpenAI', 'Docker', 'Azure', 'AutoGen']
   },
   {
     title: 'Software Engineer',
@@ -48,7 +48,7 @@ const Experience = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          viewport={{ margin: "-100px" }}
         >
           Work Experience
         </motion.h2>
@@ -61,7 +61,7 @@ const Experience = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ margin: "-50px" }}
             >
               <div className="w-5/12 text-right pr-8">
                 <motion.div 
@@ -69,7 +69,7 @@ const Experience = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ margin: "-50px" }}
                 >
                   <span className="text-blue-400">{experience.date.split('–')[0].trim()}</span>
                   <span className="text-gray-500 mx-2">–</span>
@@ -107,6 +107,7 @@ const Experience = () => {
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.2, delay: skillIndex * 0.1 }}
+                      viewport={{ margin: "-50px" }}
                       whileHover={{ 
                         scale: 1.05,
                         backgroundColor: 'rgba(59, 130, 246, 0.2)'

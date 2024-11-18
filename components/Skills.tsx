@@ -67,8 +67,8 @@ const Skills = () => {
           className="text-4xl font-bold mb-12 text-center text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+          viewport={{ once: false, margin: "-250px" }}
         >
           Skills & Technologies
           <p className="text-gray-400 text-sm italic">
@@ -82,8 +82,8 @@ const Skills = () => {
               className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-700"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              transition={{ duration: 1.2, delay: index * 0.3 }}
+              viewport={{ once: false, margin: "-250px" }}
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center mb-6">
