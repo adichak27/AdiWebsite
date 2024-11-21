@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import Spline from '@splinetool/react-spline/next';
 
 const TypewriterText = ({ text, delay }: { text: string; delay: number }) => {
   const [displayText, setDisplayText] = useState('')
@@ -88,6 +89,12 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 opacity-30" />
         <div className="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-10" />
       </div>
+
+      {/* Updated Spline Scene */}
+      <Spline
+        scene="https://prod.spline.design/S1Z1hwjfQA9qknji/scene.splinecode"
+        className="absolute inset-0 z-0"
+      />
 
       {/* Floating shapes with varied starting positions */}
       <FloatingShape delay={0} className="top-[10%] left-[10%]" />
