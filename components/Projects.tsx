@@ -31,7 +31,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          viewport={{ margin: "-100px"}}
+          viewport={{ amount: 0.2 }}
         >
           Featured Projects
         </motion.h2>
