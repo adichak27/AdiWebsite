@@ -41,10 +41,10 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 bg-gray-800">
+    <section id="experience" className="py-20 bg-cosmic-dark">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold mb-12 text-center"
+          className="text-4xl font-bold mb-12 text-center cosmic-glow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -53,7 +53,7 @@ const Experience = () => {
           Work Experience
         </motion.h2>
         <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-500" />
+          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-cosmic-primary" />
           {experiences.map((experience, index) => (
             <motion.div
               key={index}
@@ -71,17 +71,18 @@ const Experience = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ margin: "-50px" }}
                 >
-                  <span className="text-blue-400">{experience.date.split('–')[0].trim()}</span>
+                  <span className="text-cosmic-glow">{experience.date.split('–')[0].trim()}</span>
                   <span className="text-gray-500 mx-2">–</span>
-                  <span className="text-blue-400">{experience.date.split('–')[1].trim()}</span>
+                  <span className="text-cosmic-glow">{experience.date.split('–')[1].trim()}</span>
                 </motion.div>
               </div>
               <div className="z-20 absolute">
-                <div className="w-3 h-3 bg-blue-500 rounded-full" />
+                <div className="w-3 h-3 bg-cosmic-primary rounded-full shadow-cosmic" />
               </div>
-              <div className="bg-gray-900 rounded-lg shadow-xl w-5/12 px-6 py-4 ml-auto">
-                <h3 className="font-bold text-xl mb-1">{experience.title}</h3>
-                <h4 className="text-blue-400 text-md font-semibold mb-2">
+              <div className="bg-cosmic-dark/80 rounded-lg shadow-cosmic hover:shadow-cosmic-lg cosmic-border 
+                            w-5/12 px-6 py-4 ml-auto transition-all">
+                <h3 className="font-bold text-xl mb-1 cosmic-glow">{experience.title}</h3>
+                <h4 className="text-cosmic-light text-md font-semibold mb-2">
                   {experience.company}
                 </h4>
                 {experience.company === 'Take2' && (
@@ -89,7 +90,8 @@ const Experience = () => {
                     href="https://www.take2-app.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-blue-500 hover:text-blue-400 transition-colors text-sm font-semibold mb-2"
+                    className="inline-flex items-center gap-1 text-cosmic-glow hover:text-cosmic-light 
+                             transition-colors text-sm font-semibold mb-2"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -97,20 +99,21 @@ const Experience = () => {
                     <ExternalLink size={14} />
                   </motion.a>
                 )}
-                <p className="text-sm mb-3">{experience.description}</p>
+                <p className="text-sm mb-3 text-gray-300">{experience.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mt-3">
                   {experience.skills.map((skill, skillIndex) => (
                     <motion.span
                       key={skillIndex}
-                      className="px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full text-xs font-semibold"
+                      className="px-3 py-1 bg-cosmic-primary/10 text-cosmic-glow rounded-full text-xs 
+                               font-semibold hover:bg-cosmic-accent/20 transition-colors"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.2, delay: skillIndex * 0.1 }}
                       viewport={{ margin: "-50px" }}
                       whileHover={{ 
                         scale: 1.05,
-                        backgroundColor: 'rgba(59, 130, 246, 0.2)'
+                        backgroundColor: 'rgba(159, 43, 104, 0.2)'
                       }}
                     >
                       {skill}

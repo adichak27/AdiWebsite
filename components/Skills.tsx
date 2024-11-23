@@ -61,14 +61,14 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gray-900">
+    <section id="skills" className="py-20 bg-cosmic-dark">
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold mb-12 text-center text-white"
+          className="text-4xl font-bold mb-12 text-center text-white cosmic-glow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2 }}
-          viewport={{ once: false, margin: "-250px" }}
+          viewport={{ once: false, margin: "-0px" }}
         >
           Skills & Technologies
           <p className="text-gray-400 text-sm italic">
@@ -79,7 +79,8 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-700"
+              className="bg-cosmic-dark backdrop-blur-sm rounded-xl p-6 shadow-cosmic hover:shadow-cosmic-lg 
+                         border border-gray-700 transition-all"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: index * 0.3 }}
@@ -87,7 +88,7 @@ const Skills = () => {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center mb-6">
-                <skill.icon size={24} className="text-blue-400 mr-2" />
+                <skill.icon size={24} className="text-cosmic-glow mr-2" />
                 <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
               </div>
               <ul className="grid grid-cols-3 gap-4">
@@ -99,27 +100,31 @@ const Skills = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     {typeof item === 'string' ? (
-                      <span className="text-sm text-gray-300 hover:text-blue-400 transition-colors">{item}</span>
+                      <span className="text-sm text-gray-300 hover:text-cosmic-light transition-colors">
+                        {item}
+                      </span>
                     ) : (
                       <>
                         <motion.div
-                          className="relative p-3 rounded-lg bg-gray-700/50 mb-2 group-hover:bg-blue-500/10 transition-colors"
+                          className="relative p-3 rounded-lg bg-gray-700/50 mb-2 
+                                   group-hover:bg-cosmic-primary/10 transition-colors"
                           whileHover={{ 
                             rotate: 360,
                             transition: { duration: 0.6, ease: "easeInOut" }
                           }}
                         >
                           <item.icon 
-                            className="w-6 h-6 text-blue-400 group-hover:text-blue-300 transition-colors" 
+                            className="w-6 h-6 text-cosmic-glow group-hover:text-cosmic-light transition-colors" 
                           />
                           <motion.div
-                            className="absolute inset-0 rounded-lg bg-blue-400/10 opacity-0 group-hover:opacity-100"
+                            className="absolute inset-0 rounded-lg bg-cosmic-glow/10 opacity-0 
+                                     group-hover:opacity-100"
                             initial={{ scale: 0.8 }}
                             whileHover={{ scale: 1 }}
                             transition={{ duration: 0.2 }}
                           />
                         </motion.div>
-                        <span className="text-sm text-gray-300 group-hover:text-blue-400 transition-colors">
+                        <span className="text-sm text-gray-300 group-hover:text-cosmic-light transition-colors">
                           {item.name}
                         </span>
                       </>

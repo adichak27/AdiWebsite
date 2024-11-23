@@ -3,15 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0B0B1A;
+  --foreground: #ededed;
 }
 
 body {
@@ -19,3 +12,18 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .cosmic-gradient {
+    background: linear-gradient(to right, #4B0082, #9F2B68);
+  }
+  
+  .cosmic-glow {
+    text-shadow: 0 0 10px rgba(178, 75, 243, 0.5);
+  }
+  
+  .cosmic-border {
+    border: 1px solid rgba(178, 75, 243, 0.3);
+  }
+}
+

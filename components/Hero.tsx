@@ -86,15 +86,12 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background gradients and patterns */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-purple-600 opacity-30" />
-        <div className="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A0014] to-[#1A0B2E] opacity-100" />
+        <div className="absolute inset-0 bg-[url('/path/to/pattern.svg')] opacity-5" />
       </div>
 
       {/* Updated Spline Scene */}
-      <Spline
-        scene="https://prod.spline.design/S1Z1hwjfQA9qknji/scene.splinecode"
-        className="absolute inset-0 z-0"
-      />
+      
 
       {/* Floating shapes with varied starting positions */}
       <FloatingShape delay={0} className="top-[10%] left-[10%]" />
