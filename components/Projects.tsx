@@ -76,19 +76,7 @@ const Projects = () => {
                   <ExternalLink size={16} />
                   Live Demo
                 </motion.a>
-                {project.title === 'Avatar Arcade' && (
-                  <motion.a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-cosmic-glow hover:text-cosmic-light transition-colors"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <FaGithub size={20} />
-                    Source Code
-                  </motion.a>
-                )}
+                {project.title === 'Avatar Arcade'}
               </div>
             </motion.div>
           ))}

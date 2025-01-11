@@ -50,10 +50,10 @@ const About = () => {
           >
             <div className="space-y-6">
               <p className="text-lg leading-relaxed text-white">
-                Hello! I'm Adi Chakravarthy, a passionate software engineer with a strong foundation in Computer Science and Business Administration. I'm currently pursuing my Bachelor of Science at Northeastern University's Khoury College of Computer Science, specializing in Computer Science and FinTech.
+              I am a dedicated Software Engineer with a passion for building scalable solutions. With a strong background in Frontend and Backend development, I work extensively with technologies like Python, JavaScript, C#, Docker, and Azure. Additionally, I have a strong foundation in database design and microservice architecture.
+
               </p>
               <p className="text-lg leading-relaxed text-white">
-                With a GPA of 3.7/4.0 and a place on the Dean's List, I've honed my skills in various areas of computer science, including Object-Oriented Design, Algorithms, Networks/Distributed Systems, Databases, and Mobile App Development. My diverse work experience spans from co-founding a startup to working with established companies like Validea Capital Management and Ametek Precitech.
               </p>
               <motion.div
                 className="pt-6"

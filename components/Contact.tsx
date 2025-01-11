@@ -23,7 +23,7 @@ const Contact = () => {
           viewport={{ once: false, margin: "-100px" }}
         >
           <p className="text-xl text-white mb-8">
-            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, feel free to reach out!
+            Whether you have a question or just want to say hi, feel free to reach out!
           </p>
           
           <div className="flex flex-col items-center gap-6">

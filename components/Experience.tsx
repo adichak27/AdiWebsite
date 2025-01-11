@@ -3,21 +3,28 @@ import { Calendar, ExternalLink } from 'lucide-react'
 
 const experiences = [
   {
-    title: 'Co-founder',
-    company: 'Take2',
-    date: 'June 2024 – Present',
-    description: 'Engineering the E2E development of a cross-platform social media app enabling movie enthusiasts to rank, track, and view movies within their social network. Developed a real-time Firebase backend for user authentication and media storage across iOS and Android. Integrated core features including comments, likes, and infinite scrolling inspired by TikTok.',
+    title: 'Software Engineer',
+    company: 'Deloitte',
+    date: 'September 2024 – Present',
+    description: 'Led the enterprise-wide migration of client’s HR services from SAP to ServiceNow, successfully integrating 20+ workflows and migrating 100,000+ employee records using JavaScript, SQL, and Restful APIs',
     skills: ['React Native', 'Firebase', 'TypeScript', 'Node.js', 'iOS', 'Android']
   },
   {
-    title: 'Software Engineer',
+    title: 'Co-founder',
+    company: 'Take2',
+    date: 'June 2024 – December 2024',
+    description: 'Engineered the E2E development of a cross-platform social media app enabling movie enthusiasts to rank, track, and view movies within their social network. Developed a real-time Firebase backend for user authentication and media storage across iOS and Android. Integrated core features including comments, likes, and infinite scrolling inspired by TikTok.',
+    skills: ['React Native', 'Firebase', 'TypeScript', 'Node.js', 'iOS', 'Android']
+  },
+  {
+    title: 'AI Solutions Developer',
     company: 'Validea Capital Management',
     date: 'March 2024 – July 2024',
     description: `Designed an advanced multi-agent Chatbot using Autogen, OpenAI, and Python providing personalized investment support for 50,000+ clients (Deployed using Docker and Azure). Created an AI model to analyze decades of Validea's financial content, delivering tailored investment insights.`,
     skills: ['AI/ML', 'Python', 'OpenAI', 'Docker', 'Azure', 'AutoGen']
   },
   {
-    title: 'Software Engineer',
+    title: 'Back-End Software Engineer',
     company: 'Ametek Precitech',
     date: 'July 2023 – December 2023',
     description: 'Developed a programmable file browsing system (JavaScript, C++) allowing 5,000+ clients to conveniently upload and edit programs used for ultra-precision diamond milling machines. Presented new dashboard idea to senior leaders, secured approval, and implemented in C# (.Net). Resolved 50+ bugs relating to multi-threading, dependencies, memory leaks, and database contentions. Implemented CI/CD pipelines with Jenkins and Bitbucket, streamlining regression testing for 200+ test suites.',
