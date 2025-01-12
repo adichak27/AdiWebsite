@@ -208,15 +208,18 @@ export default function Portfolio() {
 
         {/* Add the protip here */}
         <motion.div
-          className="fixed bottom-24 right-8 text-sm md:text-base text-gray-300/80 z-10
-                       max-w-[200px] text-right"
+          className="fixed bottom-24 right-8 text-sm md:text-base z-10
+                     backdrop-blur-sm bg-white/10 rounded-lg p-4
+                     max-w-[220px] text-left border border-purple-300/20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           style={{ opacity: protipOpacity }}
           transition={{ delay: 3, duration: 0.8 }}
         >
           <span className="text-purple-300/90 font-medium">Pro tip: </span>
-          <span className="italic">Click and drag to explore the globe</span>
+          <span className="text-gray-200/90 italic">
+            Click and drag to explore the globe
+          </span>
         </motion.div>
       </motion.div>
 
