@@ -27,7 +27,7 @@ const experiences = [
     title: 'Back-End Software Engineer',
     company: 'Ametek Precitech',
     date: 'July 2023 – December 2023',
-    description: 'Developed a programmable file browsing system (JavaScript, C++) allowing 5,000+ clients to conveniently upload and edit programs used for ultra-precision diamond milling machines. Presented new dashboard idea to senior leaders, secured approval, and implemented in C# (.Net). Resolved 50+ bugs relating to multi-threading, dependencies, memory leaks, and database contentions. Implemented CI/CD pipelines with Jenkins and Bitbucket, streamlining regression testing for 200+ test suites.',
+    description: 'Developed a programmable file browsing system allowing 5,000+ clients to conveniently upload and edit programs used for ultra-precision diamond milling machines. Presented new dashboard idea to senior leaders, secured approval, and implemented in C# (.Net). Resolved 50+ bugs relating to multi-threading, dependencies, memory leaks, and database contentions. Implemented CI/CD pipelines with Jenkins and Bitbucket, streamlining regression testing for 200+ test suites.',
     skills: ['C#', 'JavaScript', 'Jenkins', 'Bitbucket']
   },
   {
